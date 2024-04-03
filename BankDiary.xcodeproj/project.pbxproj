@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93B7F9452BBAC9E300F43B36 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B7F9442BBAC9E300F43B36 /* MainView.swift */; };
+		93EB4A7F2BBC1C0F00615ACD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB4A7E2BBC1C0F00615ACD /* MainView.swift */; };
 		93EF011D2BBAB0F9001C1FC7 /* BankDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF011C2BBAB0F9001C1FC7 /* BankDiaryApp.swift */; };
 		93EF011F2BBAB0F9001C1FC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF011E2BBAB0F9001C1FC7 /* ContentView.swift */; };
 		93EF01212BBAB0FB001C1FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EF01202BBAB0FB001C1FC7 /* Assets.xcassets */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		93B7F9442BBAC9E300F43B36 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		93EB4A7E2BBC1C0F00615ACD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		93EF01192BBAB0F9001C1FC7 /* BankDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EF011C2BBAB0F9001C1FC7 /* BankDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDiaryApp.swift; sourceTree = "<group>"; };
 		93EF011E2BBAB0F9001C1FC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				93EF011E2BBAB0F9001C1FC7 /* ContentView.swift */,
-				93B7F9442BBAC9E300F43B36 /* MainView.swift */,
+				93EB4A7E2BBC1C0F00615ACD /* MainView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 				93EF01262BBAB0FB001C1FC7 /* Persistence.swift in Sources */,
 				93EF011F2BBAB0F9001C1FC7 /* ContentView.swift in Sources */,
 				93EF011D2BBAB0F9001C1FC7 /* BankDiaryApp.swift in Sources */,
-				93B7F9452BBAC9E300F43B36 /* MainView.swift in Sources */,
+				93EB4A7F2BBC1C0F00615ACD /* MainView.swift in Sources */,
 				93EF01292BBAB0FB001C1FC7 /* BankDiary.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
