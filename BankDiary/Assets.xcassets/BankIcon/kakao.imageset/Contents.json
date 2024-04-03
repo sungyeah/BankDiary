@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "kb64.svg",
+      "filename" : "kakao64.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "kb128.svg",
+      "filename" : "kakao128.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "kb192.svg",
+      "filename" : "kakao192.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "nh64.pdf",
+      "filename" : "nh64.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "nh64 1.svg",
+      "filename" : "nh128.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "nh64 2.svg",
+      "filename" : "nh192.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

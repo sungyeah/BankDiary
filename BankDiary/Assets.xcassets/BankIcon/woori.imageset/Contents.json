@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "woori64.pdf",
+      "filename" : "woori64.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "woori64 1.svg",
+      "filename" : "woori128.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "woori64 2.svg",
+      "filename" : "woori192.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }
