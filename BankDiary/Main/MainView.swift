@@ -24,8 +24,26 @@ struct MainView: View {
         Asset(bank: "카카오뱅크", accountName: "카카오뱅크통장", amount: 1650, image: "kakao")
     ]
     
-    enum Tab {
+    enum Tab: CaseIterable {
         case a, b, c, d
+        
+        var imageName: String {
+            switch self {
+            case .a: return "1.square.fill"
+            case .b: return "2.square.fill"
+            case .c: return "3.square.fill"
+            case .d: return "4.square.fill"
+            }
+        }
+        
+        var title: String {
+            switch self {
+            case .a: return "홈"
+            case .b: return "다이어리"
+            case .c: return "가계부"
+            case .d: return "마이"
+            }
+        }
     }
     
     @State private var selected: Tab = .a
@@ -86,74 +104,35 @@ struct MainView: View {
     }
     
     var tabBar: some View {
-        HStack {
-            Spacer()
-            Button {
-                selected = .a
-            } label: {
-                VStack(alignment: .center) {
-                    Image(systemName: "1.square.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 22)
-                    Text("홈")
+        VStack {
+            HStack(alignment: .top, spacing: 0) {
+                ForEach(Tab.allCases, id: \.self) { tab in
+                    Spacer()
+                    Button {
+                        selected = tab
+                    } label: {
+                        VStack(alignment: .center) {
+                            Image(systemName: tab.imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20)
+                            Text(tab.title).font(/*@START_MENU_TOKEN@*/.caption/*@END_MENU_TOKEN@*/)
+                        }
+                    }
+                    .foregroundStyle(selected == tab ? Color.black : Color.gray)
+                    .padding(.bottom, tab == .d ? 10.0 : 0) // "마이" 버튼의 bottom padding 조절
+                    Spacer()
                 }
             }
-            .foregroundStyle(selected == .a ? Color.black : Color.gray)
-            
-            Spacer()
-            
-            Button {
-                selected = .b
-            } label: {
-                VStack(alignment: .center) {
-                    Image(systemName: "2.square.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 22)
-                    Text("다이어리")
-                }
-            }
-            .foregroundStyle(selected == .b ? Color.black : Color.gray)
-            
-            Spacer()
-            
-            Button {
-                selected = .c
-            } label: {
-                VStack(alignment: .center) {
-                    Image(systemName: "3.square.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 22)
-                    Text("가계부")
-                }
-            }
-            .foregroundStyle(selected == .c ? Color.black : Color.gray)
-            
-            Spacer()
-            
-            Button {
-                selected = .d
-            } label: {
-                VStack(alignment: .center) {
-                    Image(systemName: "4.square.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 22)
-                    Text("마이")
-                }
-            }
-            .foregroundStyle(selected == .d ? Color.black : Color.gray)
-            Spacer()
+            .padding(.horizontal, 10)
+            .padding(.bottom, 16)
+            .frame(height: 80)
         }
-        .padding()
-        .frame(height: 80)
-        .background {
-            RoundedRectangle(cornerRadius: 24)
+        .background(
+            RoundedRectangle(cornerRadius: 20)
                 .fill(Color.white)
-//                .shadow(color: .black.opacity(0.15), radius: 8, y: 2)
-        }
+            //            .shadow(color: .black.opacity(0.15), radius: 8, y: 2)
+        )
     }
 }
 
