@@ -24,48 +24,138 @@ struct MainView: View {
         Asset(bank: "카카오뱅크", accountName: "카카오뱅크통장", amount: 1650, image: "kakao")
     ]
     
+    enum Tab {
+        case a, b, c, d
+    }
+    
+    @State private var selected: Tab = .a
     
     var body: some View {
         ZStack {
-            VStack {
-                titileView
-                ScrollView() {
-                    assetView
+            Spacer()
+            TabView(selection: $selected) {
+                Group {
+                    NavigationStack {
+                        assetView
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Text("Bank Diary")
+                                    .padding(.vertical, 10)
+                                    .font(.largeTitle)
+                                    .foregroundColor(.point)
+                                    .bold()
+                            }
+                        }
+                    }
+                    .tag(Tab.a)
+                    Text("다이어리")
+                        .tag(Tab.b)
+                    Text("가계부")
+                        .tag(Tab.c)
+                    Text("마이")
+                        .tag(Tab.d)
                 }
-            }.navigationBarTitle(Text("Bank Diary"), displayMode: .inline)
-        }.background(Color.background)
-    }
-    
-    var titileView: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Bank Diary").font(.largeTitle).foregroundColor(.point).bold()
-                Spacer()
+                .toolbar(.hidden, for: .tabBar)
             }
-            .padding(.horizontal, 15).padding(.vertical, 10.0)
-        }.background(Color.background)
+            VStack() {
+                Spacer()
+                tabBar
+            }
+            .edgesIgnoringSafeArea(.bottom)
+        }
     }
     
     var assetView: some View {
-        VStack(alignment: .leading) {
-            Text("자산 현황").font(.title2).bold().padding(.bottom, 0)
-            ForEach(data, id: \.self) { asset in
-                HStack {
-                    Image(asset.image).resizable().scaledToFit()
-                    VStack(alignment: .leading) {
-                        Text(asset.accountName).font(.footnote).foregroundColor(Color("textColor"))
-                        Text("\(asset.amount)원").font(.headline).fontWeight(.bold)
-                    }.frame(width: 260,alignment: .leading).padding(.leading, 5)
-                }.frame(width: 320).padding(.vertical,7)
+        List(data, id: \.self) { asset in
+            HStack {
+                Image(asset.image).resizable().scaledToFit()
+                VStack(alignment: .leading) {
+                    Text(asset.accountName)
+                        .font(.subheadline).foregroundColor(Color("txtBlackMediumColor"))
+                    Spacer()
+                        .frame(height: 5)
+                    Text("\(asset.amount)원")
+                        .font(.system(size: 17, weight: .semibold)).foregroundStyle(Color("txtAmountColor"))
+                }
+                .frame(width: 267,alignment: .leading)
+                .padding(.leading, 5)
             }
-        }.padding(20).background().cornerRadius(20)
+            .background(NavigationLink("", destination:EmptyView()).opacity(0))
+            .listRowSeparator(.hidden)
+        }
     }
     
-//    var calenderView: some View {
-//        
-//    }
+    var tabBar: some View {
+        HStack {
+            Spacer()
+            Button {
+                selected = .a
+            } label: {
+                VStack(alignment: .center) {
+                    Image(systemName: "1.square.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 22)
+                    Text("홈")
+                }
+            }
+            .foregroundStyle(selected == .a ? Color.black : Color.gray)
+            
+            Spacer()
+            
+            Button {
+                selected = .b
+            } label: {
+                VStack(alignment: .center) {
+                    Image(systemName: "2.square.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 22)
+                    Text("다이어리")
+                }
+            }
+            .foregroundStyle(selected == .b ? Color.black : Color.gray)
+            
+            Spacer()
+            
+            Button {
+                selected = .c
+            } label: {
+                VStack(alignment: .center) {
+                    Image(systemName: "3.square.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 22)
+                    Text("가계부")
+                }
+            }
+            .foregroundStyle(selected == .c ? Color.black : Color.gray)
+            
+            Spacer()
+            
+            Button {
+                selected = .d
+            } label: {
+                VStack(alignment: .center) {
+                    Image(systemName: "4.square.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 22)
+                    Text("마이")
+                }
+            }
+            .foregroundStyle(selected == .d ? Color.black : Color.gray)
+            Spacer()
+        }
+        .padding()
+        .frame(height: 80)
+        .background {
+            RoundedRectangle(cornerRadius: 24)
+                .fill(Color.white)
+//                .shadow(color: .black.opacity(0.15), radius: 8, y: 2)
+        }
+    }
 }
-
 
 #Preview {
     MainView()
