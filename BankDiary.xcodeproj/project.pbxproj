@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93EB4A7F2BBC1C0F00615ACD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB4A7E2BBC1C0F00615ACD /* MainView.swift */; };
+		93614D1F2BD7474900C0F985 /* AssetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93614D1E2BD7474900C0F985 /* AssetDetailView.swift */; };
+		93B1F3B02BD5E0F2009B7ECD /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B1F3AF2BD5E0F2009B7ECD /* Asset.swift */; };
+		93B1F3B32BD5E251009B7ECD /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B1F3B22BD5E251009B7ECD /* MainTabView.swift */; };
+		93B1F3B52BD5E2E3009B7ECD /* MainTabType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B1F3B42BD5E2E3009B7ECD /* MainTabType.swift */; };
+		93B1F3B72BD5E54F009B7ECD /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B1F3B62BD5E54F009B7ECD /* DiaryView.swift */; };
+		93B1F3BC2BD5E5AC009B7ECD /* CashBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B1F3BB2BD5E5AC009B7ECD /* CashBookView.swift */; };
+		93B1F3BE2BD5E5CC009B7ECD /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B1F3BD2BD5E5CC009B7ECD /* MyPageView.swift */; };
+		93EB4A7F2BBC1C0F00615ACD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EB4A7E2BBC1C0F00615ACD /* HomeView.swift */; };
 		93EF011D2BBAB0F9001C1FC7 /* BankDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF011C2BBAB0F9001C1FC7 /* BankDiaryApp.swift */; };
 		93EF011F2BBAB0F9001C1FC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EF011E2BBAB0F9001C1FC7 /* ContentView.swift */; };
 		93EF01212BBAB0FB001C1FC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93EF01202BBAB0FB001C1FC7 /* Assets.xcassets */; };
@@ -17,7 +24,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		93EB4A7E2BBC1C0F00615ACD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		93614D1E2BD7474900C0F985 /* AssetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailView.swift; sourceTree = "<group>"; };
+		93B1F3AF2BD5E0F2009B7ECD /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		93B1F3B22BD5E251009B7ECD /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		93B1F3B42BD5E2E3009B7ECD /* MainTabType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabType.swift; sourceTree = "<group>"; };
+		93B1F3B62BD5E54F009B7ECD /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DiaryView.swift; path = BankDiary/View/Diary/DiaryView.swift; sourceTree = SOURCE_ROOT; };
+		93B1F3BB2BD5E5AC009B7ECD /* CashBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashBookView.swift; sourceTree = "<group>"; };
+		93B1F3BD2BD5E5CC009B7ECD /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		93EB4A7E2BBC1C0F00615ACD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		93EF01192BBAB0F9001C1FC7 /* BankDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EF011C2BBAB0F9001C1FC7 /* BankDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDiaryApp.swift; sourceTree = "<group>"; };
 		93EF011E2BBAB0F9001C1FC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,41 +52,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		93B7F93E2BBAC6E500F43B36 /* Main */ = {
+		93614D1B2BD745CB00C0F985 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				93EF011E2BBAB0F9001C1FC7 /* ContentView.swift */,
-				93EB4A7E2BBC1C0F00615ACD /* MainView.swift */,
+				93614D1E2BD7474900C0F985 /* AssetDetailView.swift */,
 			);
-			path = Main;
+			path = Asset;
 			sourceTree = "<group>";
 		};
-		93B7F9402BBAC6FA00F43B36 /* CashBook */ = {
+		93B1F3AA2BD5DFDB009B7ECD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93614D1B2BD745CB00C0F985 /* Asset */,
+				93B1F3BA2BD5E59F009B7ECD /* CashBook */,
+				93B1F3B92BD5E586009B7ECD /* Diary */,
+				93B1F3B12BD5E20D009B7ECD /* MainTab */,
+				93B7F9432BBAC84700F43B36 /* Login */,
+				93B7F9422BBAC7DB00F43B36 /* MyPage */,
+				93B7F93E2BBAC6E500F43B36 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		93B1F3AB2BD5DFE7009B7ECD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		93B1F3AC2BD5DFF3009B7ECD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				93B1F3AF2BD5E0F2009B7ECD /* Asset.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93B1F3AD2BD5E009009B7ECD /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		93B1F3AE2BD5E02E009B7ECD /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		93B1F3B12BD5E20D009B7ECD /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				93B1F3B22BD5E251009B7ECD /* MainTabView.swift */,
+				93B1F3B42BD5E2E3009B7ECD /* MainTabType.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		93B1F3B92BD5E586009B7ECD /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				93B1F3B62BD5E54F009B7ECD /* DiaryView.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		93B1F3BA2BD5E59F009B7ECD /* CashBook */ = {
+			isa = PBXGroup;
+			children = (
+				93B1F3BB2BD5E5AC009B7ECD /* CashBookView.swift */,
 			);
 			path = CashBook;
 			sourceTree = "<group>";
 		};
-		93B7F9412BBAC72B00F43B36 /* Diary */ = {
+		93B7F93E2BBAC6E500F43B36 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				93EF011E2BBAB0F9001C1FC7 /* ContentView.swift */,
+				93EB4A7E2BBC1C0F00615ACD /* HomeView.swift */,
 			);
-			path = Diary;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		93B7F9422BBAC7DB00F43B36 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				93B1F3BD2BD5E5CC009B7ECD /* MyPageView.swift */,
 			);
-			path = MyPage;
+			name = MyPage;
+			path = ../MyPage;
 			sourceTree = "<group>";
 		};
 		93B7F9432BBAC84700F43B36 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Login;
+			name = Login;
+			path = ../Login;
 			sourceTree = "<group>";
 		};
 		93EF01102BBAB0F9001C1FC7 = {
@@ -94,12 +173,12 @@
 		93EF011B2BBAB0F9001C1FC7 /* BankDiary */ = {
 			isa = PBXGroup;
 			children = (
-				93B7F9432BBAC84700F43B36 /* Login */,
-				93B7F9422BBAC7DB00F43B36 /* MyPage */,
-				93B7F9412BBAC72B00F43B36 /* Diary */,
-				93B7F9402BBAC6FA00F43B36 /* CashBook */,
+				93B1F3AE2BD5E02E009B7ECD /* Repository */,
 				93EF011C2BBAB0F9001C1FC7 /* BankDiaryApp.swift */,
-				93B7F93E2BBAC6E500F43B36 /* Main */,
+				93B1F3AD2BD5E009009B7ECD /* General */,
+				93B1F3AC2BD5DFF3009B7ECD /* Model */,
+				93B1F3AB2BD5DFE7009B7ECD /* Service */,
+				93B1F3AA2BD5DFDB009B7ECD /* View */,
 				93EF01202BBAB0FB001C1FC7 /* Assets.xcassets */,
 				93EF01252BBAB0FB001C1FC7 /* Persistence.swift */,
 				93EF01272BBAB0FB001C1FC7 /* BankDiary.xcdatamodeld */,
@@ -188,9 +267,16 @@
 			files = (
 				93EF01262BBAB0FB001C1FC7 /* Persistence.swift in Sources */,
 				93EF011F2BBAB0F9001C1FC7 /* ContentView.swift in Sources */,
+				93B1F3B52BD5E2E3009B7ECD /* MainTabType.swift in Sources */,
 				93EF011D2BBAB0F9001C1FC7 /* BankDiaryApp.swift in Sources */,
-				93EB4A7F2BBC1C0F00615ACD /* MainView.swift in Sources */,
+				93EB4A7F2BBC1C0F00615ACD /* HomeView.swift in Sources */,
+				93B1F3B72BD5E54F009B7ECD /* DiaryView.swift in Sources */,
+				93B1F3BE2BD5E5CC009B7ECD /* MyPageView.swift in Sources */,
+				93B1F3B32BD5E251009B7ECD /* MainTabView.swift in Sources */,
+				93614D1F2BD7474900C0F985 /* AssetDetailView.swift in Sources */,
 				93EF01292BBAB0FB001C1FC7 /* BankDiary.xcdatamodeld in Sources */,
+				93B1F3BC2BD5E5AC009B7ECD /* CashBookView.swift in Sources */,
+				93B1F3B02BD5E0F2009B7ECD /* Asset.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
